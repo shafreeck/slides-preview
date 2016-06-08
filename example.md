@@ -1,4 +1,4 @@
-class:blue-text,text-darken-2
+class:blue-text text-darken-2 red lighten-2
 
 # Slides is a Slide Sync app for multiple person
 
@@ -8,7 +8,7 @@ class:blue-text,text-darken-2
 
 ---
 
-class:yellow-text,text-darken-2
+class:yellow-text text-darken-2 indigo lighten-2
 
 # Slides Menu
 
@@ -17,7 +17,7 @@ class:yellow-text,text-darken-2
 
 ---
 
-class:red-text,text-darken-2
+class:red-text text-darken-2 cyan lighten-2
 
 # Share and Sync
 
@@ -28,7 +28,7 @@ class:red-text,text-darken-2
 
 ---
 
-class:black,green-text,text-darken-2
+class:green-text text-darken-2 deep-orange lighten-2
 
 # Presents mode
 
@@ -41,7 +41,7 @@ Yeah! this is present mode, your notes comes here.
 
 ---
 
-class:pink-text,text-darken-2
+class:pink-text text-darken-2  yellow lighten-2
 
 # Usage
 
