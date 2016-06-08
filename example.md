@@ -1,3 +1,11 @@
+class: center middle pink lighten-2
+
+#An introduction to slides
+
+#### [shafreeck/slides on github](https://github.com/shafreeck/slides)
+
+---
+
 class:blue-text text-darken-2 red lighten-2
 
 # Slides is a Slide Sync app for multiple person
@@ -17,14 +25,13 @@ class:yellow-text text-darken-2 indigo lighten-2
 
 ---
 
-class:red-text text-darken-2 cyan lighten-2
+class:red-text text-darken-2 cyan lighten-3
 
 # Share and Sync
 
 * Click the slide share button to generate a share url
 * Copy url and send to your audiences
 * Just play, every opened from the shared url will keep in sync with your slide
-* test hello
 
 ---
 
