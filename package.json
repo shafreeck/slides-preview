@@ -1,9 +1,14 @@
 {
   "name": "slides-preview",
   "main": "./lib/slides-preview",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "preivew markdown slides using remarkjs",
-  "keywords": ["slide", "remarkjs", "slides", "shafreeck"],
+  "keywords": [
+    "slide",
+    "remarkjs",
+    "slides",
+    "shafreeck"
+  ],
   "activationCommands": {
     "atom-workspace": "slides-preview:toggle"
   },
