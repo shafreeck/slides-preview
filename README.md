@@ -1,5 +1,7 @@
 # slides-preview package
 
-A short description of your package.
+Slides-preview render you markdown into slides presentations using remarkjs
 
-![A screenshot of your package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
+I have another project([slides](http://github.com/shafreeck/slides)) that share and sync slides with others.
+
+![screencast](resource/slides-preview-screencast.gif)
