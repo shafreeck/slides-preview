@@ -7,7 +7,7 @@
   "activationCommands": {
     "atom-workspace": "slides-preview:toggle"
   },
-  "repository": "https://github.com/atom/slides-preview",
+  "repository": "https://github.com/shafreeck/slides-preview",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
