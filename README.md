@@ -11,4 +11,4 @@ apm install slides-preview
 ```
 
 
-![screencast](resource/slides-preview-screencast.gif)
+![screencast](https://raw.githubusercontent.com/shafreeck/slides-preview/master/resource/slides-preview-screencast.gif)
