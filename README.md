@@ -1,6 +1,6 @@
 # slides-preview package
 
-Slides-preview is an atom plugin which renders you markdown into slides presentations using remarkjs
+Slides-preview is an atom plugin which renders you markdown into slides presentations using [remarkjs](http://remarkjs.com/#1)
 
 I have another project([slides](http://github.com/shafreeck/slides)) that share and sync slides with others.
 
