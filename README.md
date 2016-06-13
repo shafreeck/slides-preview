@@ -14,10 +14,12 @@ apm install slides-preview
 Usage:
 
 1. Editing markdown
+
 * slides-preview is a plugin for remarkjs, you write markdown basing on [remarkjs's rules](https://github.com/gnab/remark/wiki/Markdown)
 * slides-preview has materiliazie-css's [color system](http://materializecss.com/color.html) builtin, so changing the background or text color is easy
 
 2. Publish
+
 * Render your presentation using html with remarkjs by yourself
 * Or generate the HTML using a command line tool:[markdown-to-slides](https://github.com/partageit/markdown-to-slides)
 * Or share and sync with others using [shafreeck/slides](https://github.com/shafreeck/slides)
