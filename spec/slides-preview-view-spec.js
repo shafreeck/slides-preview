@@ -1,9 +1,18 @@
 'use babel';
 
-import SlidesView from '../lib/slides-view';
+import path from 'path'
+
+import SlidesView from '../lib/slides-preview-view.js';
 
 describe('SlidesView', () => {
-  it('has one valid test', () => {
-    expect('life').toBe('easy');
+  let slidesView
+
+  beforeEach(() => {
+    slidesView = new SlidesView(path.join(__dirname, '../example.md'))
+  });
+
+  it('can render', () => {
+    expect(slidesView).toExist()
+    expect(slidesView.getTitle()).toBe('slides-preview')
   });
 });
