@@ -1,6 +1,8 @@
 'use babel';
 
-import Slides from '../lib/slides';
+import path from 'path'
+
+import Slides from '../lib/slides-preview.js';
 
 // Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 //
@@ -8,40 +10,18 @@ import Slides from '../lib/slides';
 // or `fdescribe`). Remove the `f` to unfocus the block.
 
 describe('Slides', () => {
-  let workspaceElement, activationPromise;
+  let workspaceElement, activationPromise, slidesElement;
 
   beforeEach(() => {
     workspaceElement = atom.views.getView(atom.workspace);
-    activationPromise = atom.packages.activatePackage('slides');
+    activationPromise = atom.packages.activatePackage('slides-preview');
+
+    waitsForPromise(() => {
+      return atom.workspace.open(path.join(__dirname, '../example.md'));
+    });
   });
 
   describe('when the slides:toggle event is triggered', () => {
-    it('hides and shows the modal panel', () => {
-      // Before the activation event the view is not on the DOM, and no panel
-      // has been created
-      expect(workspaceElement.querySelector('.slides')).not.toExist();
-
-      // This is an activation event, triggering it will cause the package to be
-      // activated.
-      atom.commands.dispatch(workspaceElement, 'slides:toggle');
-
-      waitsForPromise(() => {
-        return activationPromise;
-      });
-
-      runs(() => {
-        expect(workspaceElement.querySelector('.slides')).toExist();
-
-        let slidesElement = workspaceElement.querySelector('.slides');
-        expect(slidesElement).toExist();
-
-        let slidesPanel = atom.workspace.panelForItem(slidesElement);
-        expect(slidesPanel.isVisible()).toBe(true);
-        atom.commands.dispatch(workspaceElement, 'slides:toggle');
-        expect(slidesPanel.isVisible()).toBe(false);
-      });
-    });
-
     it('hides and shows the view', () => {
       // This test shows you an integration test testing at the view level.
 
@@ -51,11 +31,11 @@ describe('Slides', () => {
       // workspaceElement to the DOM are generally slower than those off DOM.
       jasmine.attachToDOM(workspaceElement);
 
-      expect(workspaceElement.querySelector('.slides')).not.toExist();
+      expect(workspaceElement.querySelector('#slides-container')).not.toExist();
 
       // This is an activation event, triggering it causes the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'slides:toggle');
+      atom.commands.dispatch(workspaceElement, 'slides-preview:toggle');
 
       waitsForPromise(() => {
         return activationPromise;
@@ -63,9 +43,9 @@ describe('Slides', () => {
 
       runs(() => {
         // Now we can test for view visibility
-        let slidesElement = workspaceElement.querySelector('.slides');
+        let slidesElement = workspaceElement.querySelector('#slides-container');
         expect(slidesElement).toBeVisible();
-        atom.commands.dispatch(workspaceElement, 'slides:toggle');
+        atom.commands.dispatch(workspaceElement, 'slides-preview:toggle');
         expect(slidesElement).not.toBeVisible();
       });
     });
